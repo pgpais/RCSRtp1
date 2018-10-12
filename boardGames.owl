@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pedropais/ontologies/2018/9/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/pedropais/ontologies/2018/9/untitled-ontology-6"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.boardgames.com/ontologies/boardgames.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#designed -->
+
+    <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#designed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#isDesignedBy"/>
+        <rdfs:domain rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
+        <rdfs:range rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#implements">
+        <owl:inverseOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#isImplementedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#isDesignedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#isDesignedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+        <rdfs:range rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#isImplementedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#isImplementedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#BoardGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#CaptainSonarGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CaptainSonarGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#CardDraftingMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CardDraftingMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#Category -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Category"/>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#CoopMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CoopMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#DeckBuildingMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DeckBuildingMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#Designer -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#DiceRollingMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DiceRollingMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#FlickemUpGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FlickemUpGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#GridMovementMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#GridMovementMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#MagicMazeGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MagicMazeGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#Mechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#ModularBoardMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ModularBoardMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#Munchkin -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Munchkin">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#ScytheGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ScytheGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#SecretHitlerGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SecretHitlerGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#StarRealmsGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#StarRealmsGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#DeckBuildingMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#StrategyGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#StrategyGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#TerraformingMarsGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#TerraformingMarsGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#TownOfSalemGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#TownOfSalemGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#WorkerPlacementMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#WorkerPlacementMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CardDraftingMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CoopMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DeckBuildingMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DiceRollingMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#GridMovementMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ModularBoardMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#WorkerPlacementMechanic"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
