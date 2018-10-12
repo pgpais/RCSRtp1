@@ -78,6 +78,32 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#AzulGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#AzulGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#BluffingGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BluffingGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic">
@@ -99,7 +125,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity"/>
-                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Medium"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Simple"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -110,6 +142,32 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CardDraftingMechanic">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#CardGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CardGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#CardDraftingMechanic"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#DeckBuildingMechanic"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -155,6 +213,32 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#DeductionGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DeductionGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#DeductionMechanic"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#DeductionMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DeductionMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#Designer -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
@@ -177,10 +261,46 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#EasyGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#EasyGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Easy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#Extreme -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Extreme">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#ComplexityValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#ExtremeGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ExtremeGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Extreme"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -209,6 +329,50 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#HardGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#HardGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Hard"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#LuckGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#LuckGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#CardDraftingMechanic"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#DiceRollingMechanic"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#MagicMazeGame -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MagicMazeGame">
@@ -231,6 +395,24 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#MediumGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MediumGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Medium"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#ModularBoardMechanic -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ModularBoardMechanic">
@@ -239,9 +421,9 @@
     
 
 
-    <!-- http://www.boardgames.com/ontologies/boardgames.owl#Munchkin -->
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#MunchkinGame -->
 
-    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Munchkin">
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MunchkinGame">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
     </owl:Class>
     
@@ -275,6 +457,18 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SecretHitlerGame">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#DeductionMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -286,10 +480,12 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
-                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BluffingGame"/>
+                            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DeductionGame"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -301,6 +497,24 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Simple">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#ComplexityValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#SimpleGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SimpleGame">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Simple"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -323,12 +537,6 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SteveJackson">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#designed"/>
-                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Munchkin"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -359,6 +567,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#DeductionMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -373,6 +587,14 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#WorkerPlacementMechanic">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#7WondersGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#7WondersGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
     </owl:Class>
     
 
