@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pedropais/ontologies/2018/9/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/pedropais/ontologies/2018/9/untitled-ontology-6"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:boardgames.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:boardgames.owl#designed -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:boardgames.owl#designed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="urn:absolute:boardgames.owl#isDesignedBy"/>
+        <rdfs:domain rdf:resource="urn:absolute:boardgames.owl#Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#implements -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:boardgames.owl#implements"/>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#isDesignedBy -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:boardgames.owl#isDesignedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="urn:absolute:boardgames.owl#Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#isImplementedBy -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:boardgames.owl#isImplementedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:boardgames.owl#BluffingMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#BluffingMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#BoardGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#BoardGame"/>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#CaptainSonarGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#CaptainSonarGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#CardDraftingMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#CardDraftingMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#Category -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#Category"/>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#CoopMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#CoopMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#DeckBuildingMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#DeckBuildingMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#Designer -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#Designer"/>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#DiceRollingMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#DiceRollingMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#FlickemUpGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#FlickemUpGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#GridMovementMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#GridMovementMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#MagicMazeGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#MagicMazeGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#Mechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#Mechanic"/>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#ModularBoardMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#ModularBoardMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#NamedBoardGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#NamedBoardGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#BoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#RealTimeMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#RealTimeMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#ScytheGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#ScytheGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#SecretHitlerGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#SecretHitlerGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#StarRealmsGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#StarRealmsGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#TerraformingMarsGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#TerraformingMarsGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#TownOfSalemGame -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#TownOfSalemGame">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#NamedBoardGame"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:boardgames.owl#WorkerPlacementMechanic -->
+
+    <owl:Class rdf:about="urn:absolute:boardgames.owl#WorkerPlacementMechanic">
+        <rdfs:subClassOf rdf:resource="urn:absolute:boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#BluffingMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#CardDraftingMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#CoopMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#DeckBuildingMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#DiceRollingMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#GridMovementMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#ModularBoardMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#RealTimeMechanic"/>
+            <rdf:Description rdf:about="urn:absolute:boardgames.owl#WorkerPlacementMechanic"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
