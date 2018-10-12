@@ -245,6 +245,14 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#DexterityGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DexterityGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#DiceRollingMechanic -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DiceRollingMechanic">
@@ -305,10 +313,24 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#FingerFlickingMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FingerFlickingMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#FlickemUpGame -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FlickemUpGame">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#FingerFlickingMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -347,6 +369,15 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#JengaGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#JengaGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#TowerStackingGame"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#LuckGame -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#LuckGame">
@@ -377,6 +408,12 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MagicMazeGame">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -441,6 +478,20 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#SantoriniGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SantoriniGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#GridMovementMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -553,6 +604,28 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#TerraformingMarsGame">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#TilePlacementMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#TilePlacementMechanic -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#TilePlacementMechanic">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#TowerStackingGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#TowerStackingGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
     </owl:Class>
     
 
