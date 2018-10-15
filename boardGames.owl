@@ -609,8 +609,14 @@
                     <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BluffingGame"/>
-                            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#DeductionGame"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BluffingMechanic"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#DeductionMechanic"/>
+                            </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:intersectionOf>
