@@ -547,6 +547,12 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#RealTimeMechanic">
