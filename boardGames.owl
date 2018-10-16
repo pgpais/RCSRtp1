@@ -356,6 +356,14 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#FewPlayers -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FewPlayers">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#FingerFlickingMechanic -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FingerFlickingMechanic">
@@ -547,6 +555,14 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#PartyPlayers -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#PartyPlayers">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
@@ -653,6 +669,14 @@
     
 
 
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#SeveralPlayers -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SeveralPlayers">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#Simple -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Simple">
@@ -675,6 +699,14 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#SomePlayers -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SomePlayers">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
     </owl:Class>
     
 
@@ -877,6 +909,15 @@
             <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Hard"/>
             <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Medium"/>
             <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Simple"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FewPlayers"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#PartyPlayers"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SeveralPlayers"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SomePlayers"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
