@@ -360,6 +360,7 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FewPlayers">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+        <rdfs:comment>1 to 4 players</rdfs:comment>
     </owl:Class>
     
 
@@ -559,6 +560,7 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#PartyPlayers">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+        <rdfs:comment>6 to 10 players</rdfs:comment>
     </owl:Class>
     
 
@@ -673,6 +675,7 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SeveralPlayers">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+        <rdfs:comment>6 to 10 players</rdfs:comment>
     </owl:Class>
     
 
@@ -707,6 +710,7 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SomePlayers">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#PlayerNumber"/>
+        <rdfs:comment>4 to 6 players</rdfs:comment>
     </owl:Class>
     
 
