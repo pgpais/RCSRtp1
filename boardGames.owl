@@ -26,6 +26,7 @@
     <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#designed">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#isDesignedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
         <rdfs:range rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
     </owl:ObjectProperty>
@@ -36,6 +37,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:range rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#ComplexityValuePartition"/>
     </owl:ObjectProperty>
     
@@ -46,6 +49,7 @@
     <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#implements">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#isImplementedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -54,6 +58,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#isDesignedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
         <rdfs:range rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
     </owl:ObjectProperty>
@@ -64,6 +69,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#isImplementedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -188,6 +194,20 @@
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#Category -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#Category"/>
+    
+
+
+    <!-- http://www.boardgames.com/ontologies/boardgames.owl#ChessGame -->
+
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ChessGame">
+        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#NamedBoardGame"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#GridMovementMechanic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -690,7 +710,17 @@
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#StrategyGame -->
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#StrategyGame">
-        <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#GridMovementMechanic"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -800,6 +830,25 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#AzulGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#CaptainSonarGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ChessGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FlickemUpGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#JengaGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MagicMazeGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MunchkinGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SantoriniGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ScytheGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SecretHitlerGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#StarRealmsGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#TerraformingMarsGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#TownOfSalemGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#7WondersGame"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
