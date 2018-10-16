@@ -44,6 +44,7 @@
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#implements -->
 
     <owl:ObjectProperty rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#implements">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#isImplementedBy"/>
     </owl:ObjectProperty>
     
@@ -676,6 +677,12 @@
 
     <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SteveJackson">
         <rdfs:subClassOf rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Designer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#designed"/>
+                <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#MunchkinGame"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
