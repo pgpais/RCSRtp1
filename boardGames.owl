@@ -133,7 +133,22 @@
 
     <!-- http://www.boardgames.com/ontologies/boardgames.owl#BoardGame -->
 
-    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame"/>
+    <owl:Class rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#BoardGame">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#hasComplexity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#ComplexityValuePartition"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#implements"/>
+                        <owl:someValuesFrom rdf:resource="http://www.boardgames.com/ontologies/boardgames.owl#Mechanic"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
