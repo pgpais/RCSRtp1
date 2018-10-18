@@ -939,6 +939,16 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#EasyGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#ExtremeGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#HardGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#MediumGame"/>
+            <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SimpleGame"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#FewPlayers"/>
             <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#PartyPlayers"/>
             <rdf:Description rdf:about="http://www.boardgames.com/ontologies/boardgames.owl#SeveralPlayers"/>
